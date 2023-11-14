@@ -1,0 +1,2 @@
+*.pkl filter=lfs diff=lfs merge=lfs -text
+email_fraud_detector filter=lfs diff=lfs merge=lfs -text
