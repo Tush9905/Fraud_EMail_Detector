@@ -4,6 +4,8 @@
 
 ## How to use it in your projects -
 
+## ***Note - Since the actual model size exceeds the Github and Github LFS Limit, the model files aren't included. However, you can generate the model by running the Model_Notebook.ipynb.***
+
 * You can load it using joblib -
 
   ``` python
