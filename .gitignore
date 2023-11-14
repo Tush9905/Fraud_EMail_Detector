@@ -3,6 +3,10 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+# ML Model
+*.pkl
+email_fraud_detector/
+
 # C extensions
 *.so
 
