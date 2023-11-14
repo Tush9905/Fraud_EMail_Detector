@@ -15,7 +15,7 @@
   
 ### **OR**
   
-* You can use hugging face pipeline and import the model using the config in the generated folder (Fraud_EMail_Detector) -
+* You can use hugging face pipeline and import the model using the config in the generated folder -
 
   ``` python
   from transformers import pipeline
