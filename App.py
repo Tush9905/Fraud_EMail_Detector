@@ -11,4 +11,8 @@ with st.form("my_form"):
       model_output = model(email)
       label = model_output[0]["label"]
       score = model_output[0]["score"]
-      st.write(f"The E-Mail looks {int(score*100)}% {label}")
+      if label == "FRAUD":
+        st.error(f"The E-Mail looks {int(score*100)}% {label}")
+      else:
+         st.success(f"The E-Mail looks {int(score*100)}% {label}")
+         
