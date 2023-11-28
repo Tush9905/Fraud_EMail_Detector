@@ -1,6 +1,5 @@
 # Fraud_EMail_Detector
 * Achieved **99.86%** Accuracy in Fraud E-Mail Detection using Natural Language Processing (NLP) by Fine Tuning the **RoBERTa LLM Transformer** on a Dataset of 11,928 E-Mails using Python, Pandas, PyTorch, Hugging Face.
-* It is not Overfit
 
 ## How to use it in your projects -
 
