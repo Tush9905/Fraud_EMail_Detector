@@ -1,9 +1,9 @@
 import streamlit as st
 import joblib
 from huggingface_token import token
+import requests
 
 st.title("Fraud E-Mail Detector")
-import requests
 
 API_URL = "https://api-inference.huggingface.co/models/tush9905/email_fraud_detector"
 headers = {"Authorization": f"Bearer {token}"}
