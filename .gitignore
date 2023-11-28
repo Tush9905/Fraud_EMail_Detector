@@ -7,6 +7,9 @@ __pycache__/
 *.pkl
 email_fraud_detector/
 
+# Huggingface token
+huggingface_token.py
+
 # C extensions
 *.so
 
