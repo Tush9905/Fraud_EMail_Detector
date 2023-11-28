@@ -20,7 +20,7 @@ def query(payload):
 ### By Importing the Model Itself
   ``` python
   from transformers import AutoModel
-  model = AutoModel.from_pretrained("tush9905/fake_news_detector")
+  model = AutoModel.from_pretrained("tush9905/email_fraud_detector")
   ```
 
 
