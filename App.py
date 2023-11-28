@@ -13,7 +13,7 @@ def query(payload):
 	return response.json()
 
 with st.form("my_form"):
-   email = st.text_input("Copy and Paste the E-Mail Content v1.1")
+   email = st.text_input("Copy and Paste the E-Mail Content")
    submit = st.form_submit_button('Check')
 
    if submit:
