@@ -1,5 +1,8 @@
 # Fraud_EMail_Detector
 * Achieved **99.86%** Accuracy in Fraud E-Mail Detection using Natural Language Processing (NLP) by Fine Tuning the **RoBERTa LLM Transformer** on a Dataset of 11,928 E-Mails using Python, Pandas, PyTorch, Hugging Face.
+* Used **Hugging Face Hub** with **Hugging Face Inference API** for **MLOps / Deploying** the Model.
+* Developed an Interactive Web App using Streamlit.
+* Tech Used - **Python, Pandas, PyTorch, Hugging Face, Streamlit.**
 
 ## How to use it in your projects (2 Ways) -
 ### Using API Calls with Hugging Face Inference API (Recommended for using it directly in your App)
