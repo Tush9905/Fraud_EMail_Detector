@@ -1,22 +1,29 @@
 # Fraud_EMail_Detector
 * Achieved **99.86%** Accuracy in Fraud E-Mail Detection using Natural Language Processing (NLP) by Fine Tuning the **RoBERTa LLM Transformer** on a Dataset of 11,928 E-Mails using Python, Pandas, PyTorch, Hugging Face.
+* Used **Hugging Face Hub** with **Hugging Face Inference API** for **MLOps / Deploying** the Model.
+* Developed an Interactive Web App using Streamlit.
+* Tech Used - **Python, Pandas, PyTorch, Hugging Face, Streamlit.**
 
-## How to use it in your projects -
+## How to use it in your projects (2 Ways) -
+### Using API Calls with Hugging Face Inference API (Recommended for using it directly in your App)
+``` python
+import requests
+from huggingface_token import token
+# Use your own token
 
-### ***Note - Since the actual model size exceeds the Github and Github LFS Free Limit, the model files aren't included. However, you can generate the model by running the Model_Notebook.ipynb.***
+st.write("# Fake News Detector")
+API_URL = "https://api-inference.huggingface.co/models/tush9905/email_fraud_detector"
+headers = {"Authorization": f"Bearer {token}"}
 
-* You can load it using joblib -
-
+def query(payload):
+	response = requests.post(API_URL, headers=headers, json=payload)
+	return response.json()
+```
+### OR
+### By Importing the Model Itself
   ``` python
-  import joblib
-  joblib.load("Email_Fraud_Detector_Model.pkl")
+  from transformers import AutoModel
+  model = AutoModel.from_pretrained("tush9905/email_fraud_detector")
   ```
-  
-### **OR**
-  
-* You can use hugging face pipeline and import the model using the config in the generated folder -
 
-  ``` python
-  from transformers import pipeline
-  classifier = pipeline("text-classification", model="./email_fraud_detector/")
-  ```
+
