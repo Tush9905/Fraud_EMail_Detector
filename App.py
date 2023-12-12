@@ -1,12 +1,15 @@
 import streamlit as st
 import joblib
-from huggingface_token import token
+import os 
+from dotenv import load_dotenv
 import requests
 
 st.title("Fraud E-Mail Detector")
 
+load_dotenv()
+huggingface_token = os.environ["HUGGINGFACE_HUB_TOKEN"]
 API_URL = "https://api-inference.huggingface.co/models/tush9905/email_fraud_detector"
-headers = {"Authorization": f"Bearer {token}"}
+headers = {"Authorization": f"Bearer {huggingface_token}"}
 
 def query(payload):
 	response = requests.post(API_URL, headers=headers, json=payload)
