@@ -7,13 +7,16 @@
 ## How to use it in your projects (2 Ways) -
 ### Using API Calls with Hugging Face Inference API (Recommended for using it directly in your App)
 ``` python
+import streamlit as st
+import joblib
+import os 
+from dotenv import load_dotenv
 import requests
-from huggingface_token import token
-# Use your own token
 
-st.write("# Fake News Detector")
+load_dotenv()
+huggingface_token = os.environ["HUGGINGFACE_HUB_TOKEN"]
 API_URL = "https://api-inference.huggingface.co/models/tush9905/email_fraud_detector"
-headers = {"Authorization": f"Bearer {token}"}
+headers = {"Authorization": f"Bearer {huggingface_token}"}
 
 def query(payload):
 	response = requests.post(API_URL, headers=headers, json=payload)
